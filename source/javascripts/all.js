@@ -1,8 +1,8 @@
 //= require_tree .
 // wait for the DOM to be loaded 
 $(document).ready(function() { 
-    // bind 'myForm' and provide a simple callback function 
-    $('#myForm').ajaxForm(function() { 
-        alert("Thank you for your comment!"); 
-    }); 
+    //image swapping
+    $('.reveal-truth').click(function() {
+      $('.test-module').toggleClass('test-module-truth');
+    });
 }); 

@@ -10,22 +10,29 @@
     <title><%= current_page.data.title || "The Middleman" %></title>
     
     <%= stylesheet_link_tag "normalize", "all" %>
-    <%= javascript_include_tag  "all" %>
+
   </head>
   
   
   <body class="<%= page_classes %>">
+    <div class="page-wrap">
     <header>
-      <p>Here's the header</p>
+      <div class="wrap">
+        <p>Here's the header</p>
+      </div>
     </header>  
     
     <%= yield %>
 
       
     <footer>
-      <p>By <a target="_blank" href="https://twitter.com/twahlin">Tom Wahlin</a> and <a target="_blank" href="https://twitter.com/cbroeckert">Cassie Broeckert</a></p>
+      <div class="wrap">
+        <p>By <a target="_blank" href="https://twitter.com/twahlin">Tom Wahlin</a> and <a target="_blank" href="https://twitter.com/cbroeckert">Cassie Broeckert</a></p>
+      </div>
     </footer>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+    <%= javascript_include_tag  "all" %>
+    </div>
   </body>
 </html>
