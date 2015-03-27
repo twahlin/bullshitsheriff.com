@@ -31,7 +31,7 @@ h1 {
     .doc a:hover {
       color: #666; }
 
-.welcome {
+body {
   -webkit-animation-name: welcome;
   -webkit-animation-duration: .9s; }
 
