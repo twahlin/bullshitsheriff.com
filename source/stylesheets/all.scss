@@ -59,10 +59,6 @@ p {
 	line-height: 20px;
 }
 
-.test-section {
-  background: black;
-}
-
 .wrap {
   margin: 0 auto;
   max-width: 1400px;
@@ -91,22 +87,44 @@ a:hover {
 	text-decoration: underline;
 }
 
+.cta {
+	cursor: pointer;
+	color: $darkest;
+	font-size: 20px;
+	background: $middle;
+	display: inline-block;
+	height: 44px;
+	line-height: 44px;
+	padding: 0 12px;
+	@include league-gothic;
+	@include transition-all;
+	@include border-radius(2px);
+}
+
+.cta:hover {
+	text-decoration: none;
+	background: $lightest;
+}
+
 
 header {
   padding-top: 40px;
   background: $darkest;
-  background: url(../images/hero.jpg) no-repeat left center;
+  background: url(../images/hero.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   nav {
+		border-top:1px solid black;
+		border-bottom:1px solid black;
     height: 50px;
     background: transparentize($darkest, .1);
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     overflow: visible;
     position: relative;
+		line-height: 50px;
     .logo {
       position: absolute;
       height: 78px;
@@ -118,33 +136,51 @@ header {
       @include image-2x("../images/bullshit-sheriff-logo@2x.png", 68px, 78px);
       overflow: visible;
 			h1 {
-				font-size: 26px;
+				font-size: 24px;
 			}
     }
     ul {
       float: right;
       li {
         float: right;
+				@include league-gothic;
+				font-size: 18px;
       }
     }
   }
   .hero-content {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
-	padding: 0 0 40px 0;
+		padding: 0 0 40px 0;
+		@include text-shadow(0 2px 30px $darkest);
+		text-align: left;
+		@include breakpoint(small) { padding: 20px 0; }
+		@include breakpoint(small) { padding: 40px 0; }
   h2 {
     font-size: 60px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+		@include breakpoint(small) { font-size: 80px; }
+		@include breakpoint(medium) { font-size: 120px; }
   }
   p {
     text-align: center;
+		margin-bottom: 20px;
+		@include breakpoint(small) { font-size: 16px; line-height: 24px; }
+		@include breakpoint(medium) { font-size: 22px; line-height: 30px; }
   }
+	.social-share {
+		text-align: center;
+		li {
+			display: inline-block;
+			padding: 0 10px;
+		}
+	}
   }
 }
 
 section {
-  padding: 20px 0 0 0;
+	background-color: $darker;
   .explainer-bullshit {
 	  overflow: hidden;
   }
@@ -161,6 +197,10 @@ section {
 		@include transition-all;
   	}
   }
+}
+
+section:nth-child(odd) {
+    background-color: $darkest;
 }
 
 .phone-module-wrap {
