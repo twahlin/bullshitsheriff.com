@@ -53,6 +53,14 @@ $lightest: rgba(241, 233, 221, 1);
 // ==========================================================================
 
 //Typography
+
+@mixin league-gothic {font-family: "league-gothic",sans-serif; font-style: normal; font-weight: 400; text-transform: uppercase;}
+@mixin tisa-regular {font-family: "ff-tisa-web-pro",serif; font-style: normal; font-weight: 400;}
+@mixin tisa-italic {font-family: "ff-tisa-web-pro",serif; font-style: italic; font-weight: 400;}
+@mixin tisa-bold {font-family: "ff-tisa-web-pro",serif; font-style: normal; font-weight: 700;}
+@mixin tisa-bold-italic {font-family: "ff-tisa-web-pro",serif; font-style: italic; font-weight: 700;}
+
+
 @mixin nexa-light { font-family: nexa_lightregular, "Helvetica Neue", Helvetica, Arial, sans-serif;}
 @mixin nexa-book { font-family: nexa_bookregular, "Helvetica Neue", Helvetica, Arial, sans-serif;}
 @mixin nexa-regular { font-family: nexa_regularregular, "Helvetica Neue", Helvetica, Arial, sans-serif;}

@@ -3,12 +3,7 @@
 @import "reset";
 @import "mixins";
 
-body {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s;
-  background: $darkest;
-  color: $lightest; 
-}
+
 
 //preload images
 //body:after{
@@ -45,6 +40,25 @@ body {
 //  width: 200px;
 //}
 //
+
+body {
+  -webkit-animation-name: welcome;
+  -webkit-animation-duration: .9s;
+  background: $darkest;
+  color: $lightest; 
+  @include tisa-regular;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include league-gothic;
+	
+}
+
+p {
+	font-size: 16px;
+	line-height: 20px;
+}
+
 .test-section {
   background: black;
 }
@@ -54,6 +68,12 @@ body {
   max-width: 1400px;
   padding: 0 20px;
   overflow: hidden;
+	@include breakpoint(medium) {
+		padding: 0 40px;
+	}
+	@include breakpoint(large) {
+		padding: 0 80px;
+	}
 }
 
 
@@ -64,6 +84,11 @@ h3 {
 
 a {
 	color: $middle;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 
@@ -92,6 +117,9 @@ header {
       background: url(../images/bullshit-sheriff-logo.png) no-repeat left center;
       @include image-2x("../images/bullshit-sheriff-logo@2x.png", 68px, 78px);
       overflow: visible;
+			h1 {
+				font-size: 26px;
+			}
     }
     ul {
       float: right;
