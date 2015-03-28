@@ -5,7 +5,10 @@
 
 body {
   -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s; }
+  -webkit-animation-duration: .9s;
+  background: $darkest;
+  color: $lightest; 
+}
 
 @-webkit-keyframes welcome {
   from {
@@ -28,11 +31,13 @@ body {
 
 .wrap {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1400px;
+  padding: 0 20px;
 }
 
 section {
   background:red;
+  padding: 20px 0;
 }
 
 .test-section {
@@ -48,3 +53,55 @@ section {
 .test-module-truth {
   background: aqua;
 }
+
+
+header {
+  padding-top: 40px;
+  height: 500px;
+  background: $darkest;
+  h1 {
+    float: left;
+  }
+  nav {
+    height: 50px;
+    background:$dark;
+    width: 100%;
+    top: 50px;
+    line-height: 50px;
+    ul {
+      float: right;
+      li {
+        float: right;
+      }
+    }
+  }
+}
+
+
+
+
+
+//
+//From Tomwahlin.com
+
+//h1 {
+//  position: absolute;
+//  left: 20px;
+//  padding-top: 38px;
+//  width: 46px;
+//  top: 65px;
+//  @include breakpoint(large) {
+//    left: 50%;
+//    margin-left: -23px;
+//  }
+//  a {
+//    background: url(../img/build/logo-tom-wahlin.png) no-repeat center;
+//    @include image-2x("../img/build/logo-tom-wahlin@2x.png", 46px, 38px);
+//    position: absolute;
+//    padding-top: 38px;
+//    width: 46px;
+//    top:0;
+//    right: 0;
+//    @include hide-text;
+//  }
+//}
