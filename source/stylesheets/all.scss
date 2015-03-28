@@ -45,19 +45,18 @@ body {
 //  width: 200px;
 //}
 //
-//.test-module-truth {
-//  background: aqua;
-//}
+.test-section {
+  background: black;
+}
 
 .wrap {
   margin: 0 auto;
   max-width: 1400px;
   padding: 0 20px;
+  overflow: hidden;
 }
 
-section {
-  padding: 20px 0 0 0;
-}
+
 
 h3 {
 	font-size: 40px;
@@ -68,7 +67,7 @@ a {
 }
 
 
-.header {
+header {
   padding-top: 40px;
   background: $darkest;
   background: url(../images/hero.jpg) no-repeat left center;
@@ -116,32 +115,100 @@ a {
   }
 }
 
+section {
+  padding: 20px 0 0 0;
+  .explainer-bullshit {
+	  overflow: hidden;
+  }
+  .module-wrap {
+  	background: blue;
+  	margin: 0 auto;
+  	.module-screen {
+  	    -webkit-background-size: cover;
+  	    -moz-background-size: cover;
+  	    -o-background-size: cover;
+  	    background-size: cover;
+  		width: 100%;
+  		height: 100%;
+		@include transition-all;
+  	}
+  }
+}
+
 .phone-module-wrap {
-	background: blue;
-	margin: 0 auto;
 	height: 420px;
 	width: 280px;
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
 	padding: 40px 15px 0 15px;
 	.phone-module {
-		background: url(../images/screenshot-instagram.jpg) no-repeat top center;
-		width: 100%;
-		height: 100%;
-	    -webkit-background-size: cover;
-	    -moz-background-size: cover;
-	    -o-background-size: cover;
-	    background-size: cover;
+		background-image: url(../images/screenshot-instagram.jpg);
 	}
 	.frame-instagram-truth {
-		background: url(../images/screenshot-instagram-bs.jpg) no-repeat top center;
-	    -webkit-background-size: cover;
-	    -moz-background-size: cover;
-	    -o-background-size: cover;
-	    background-size: cover;
+		background-image: url(../images/screenshot-instagram-bs.jpg);
 	}	
 }
 
+.monitor-module-wrap {
+	height: 200px;
+	width: 300px;
+	border-top-right-radius: 14px;
+	border-bottom-right-radius: 14px;
+	float: left;
+	padding: 15px 15px 15px 10px;
+	.monitor-module {
+	 	background-image: url(../images/screenshot-facebook.jpg);	
+	}
+	.frame-facebook-truth {
+		background-position: center bottom;
+	}
+}
+
+.action-items {
+	.col-left{
+		float: left;
+		width: 50%;
+		.col-wrap {
+			padding-right: 20px;
+		}
+	}
+	.col-right{
+		float: right;
+		width: 50%;
+		.col-wrap {
+			padding-left: 20px;
+		}
+	}
+
+}
+
+form {
+	label {
+		display: block;
+	}
+	input {
+		background: $middle;
+		border: none;
+		display: block;
+		width: 100%;
+		height: 40px;
+		margin-bottom: 10px;
+		padding: 0;
+	}
+	input[type="submit"] {
+		background: red;
+		color: $lightest;
+		padding: 10px 20px;
+		display: inline-block;
+		width: auto;
+		float: right;
+	}
+}
+
+footer {
+	background: green;
+	padding: 20px 0;
+}
 
 //
 //From Tomwahlin.com
