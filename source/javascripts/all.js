@@ -2,8 +2,9 @@
 // wait for the DOM to be loaded 
 $(document).ready(function() { 
     //image swapping
-    $('.reveal-truth').click(function() {
-      $('.test-module').toggleClass('test-module-truth');
+    $('.reveal-truth-instagram').click(function() {
+      $('.frame-instagram').toggleClass('frame-instagram-truth');
+	  return false;
     });
 }); 
 

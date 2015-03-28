@@ -10,6 +10,12 @@ body {
   color: $lightest; 
 }
 
+//preload images
+body:after{
+    display:none;
+    content: url(../images/screenshot-instagram-bs.jpg);
+}
+
 @-webkit-keyframes welcome {
   from {
     -webkit-transform: scale(0);
@@ -37,7 +43,7 @@ body {
 
 section {
   background:red;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
 }
 
 .test-section {
@@ -54,15 +60,26 @@ section {
   background: aqua;
 }
 
+h3 {
+	font-size: 40px;
+}
+
+a {
+	color: $middle;
+}
 
 
 .header {
   padding-top: 40px;
   background: $darkest;
+  background: url(../images/hero.jpg) no-repeat left center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   nav {
     height: 50px;
-    background:$darkest;
-    border: 1px solid $dark;
+    background: transparentize($darkest, .1);
     width: 100%;
     margin-bottom: 60px;
     overflow: visible;
@@ -87,7 +104,8 @@ section {
   }
   .hero-content {
     max-width: 600px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto;
+	padding: 0 0 40px 0;
   h2 {
     font-size: 60px;
     text-align: center;
@@ -99,8 +117,31 @@ section {
   }
 }
 
-
-
+.phone-module-wrap {
+	background: blue;
+	margin: 0 auto;
+	height: 420px;
+	width: 280px;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	padding: 40px 15px 0 15px;
+	.phone-module {
+		background: url(../images/screenshot-instagram.jpg) no-repeat top center;
+		width: 100%;
+		height: 100%;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	}
+	.frame-instagram-truth {
+		background: url(../images/screenshot-instagram-bs.jpg) no-repeat top center;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	}	
+}
 
 
 //
