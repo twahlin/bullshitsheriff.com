@@ -11,29 +11,43 @@ body {
 }
 
 //preload images
-body:after{
-    display:none;
-    content: url(../images/screenshot-instagram-bs.jpg);
-}
+//body:after{
+//    display:none;
+//    content: url(../images/screenshot-instagram-bs.jpg);
+//}
+//
+//@-webkit-keyframes welcome {
+//  from {
+//    -webkit-transform: scale(0);
+//    opacity: 0;
+//  }
+//  50% {
+//   -webkit-transform: scale(0);
+//   opacity: 0;
+//  }
+//  82.5% {
+//    -webkit-transform: scale(1.03);
+//    -webkit-animation-timing-function: ease-out;
+//    opacity: 1;
+//  }
+//  to {
+//    -webkit-transform: scale(1);
+//  }
+//}
 
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
+//.test-section {
+//  background: #666;
+//}
+//
+//.test-module {
+//  background: red;
+//  height: 200px;
+//  width: 200px;
+//}
+//
+//.test-module-truth {
+//  background: aqua;
+//}
 
 .wrap {
   margin: 0 auto;
@@ -42,22 +56,7 @@ body:after{
 }
 
 section {
-  background:red;
   padding: 20px 0 0 0;
-}
-
-.test-section {
-  background: #666;
-}
-
-.test-module {
-  background: red;
-  height: 200px;
-  width: 200px;
-}
-
-.test-module-truth {
-  background: aqua;
 }
 
 h3 {
