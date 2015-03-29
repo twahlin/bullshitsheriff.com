@@ -1,6 +1,7 @@
 //= require_tree .
 // wait for the DOM to be loaded 
 $(document).ready(function() { 
+
     //image swapping
     $('.reveal-truth-instagram').click(function() {
       $('.frame-instagram').toggleClass('frame-instagram-truth');
