@@ -42,6 +42,7 @@
 //
 
 body {
+	-webkit-appearance:none;
   -webkit-animation-name: welcome;
   -webkit-animation-duration: .9s;
   background: $darkest;
@@ -57,6 +58,12 @@ h1, h2, h3, h4, h5, h6 {
 p {
 	font-size: 16px;
 	line-height: 20px;
+}
+strong {
+	@include tisa-bold;
+}
+em {
+	@include tisa-italic;
 }
 
 .wrap {
@@ -96,6 +103,7 @@ a:hover {
 	height: 44px;
 	line-height: 44px;
 	padding: 0 12px;
+	text-align: center;
 	@include league-gothic;
 	@include transition-all;
 	@include border-radius(2px);
@@ -185,7 +193,7 @@ section {
 	  overflow: hidden;
   }
   .module-wrap {
-  	background: blue;
+  	background-color: $darkest;
   	margin: 0 auto;
   	.module-screen {
   	    -webkit-background-size: cover;
@@ -199,13 +207,84 @@ section {
   }
 }
 
+
+
+
 section:nth-child(odd) {
-    background-color: $darkest;
+	background-color: $darkest;
+  .module-wrap {
+  	background-color: $darker;
+  }
+}
+
+
+
+.how-it-works {
+	padding-top: 20px;
+			@include breakpoint(medium) {
+				padding: 60px 0;
+			}
+	h3 {
+		text-align: center;
+		margin-bottom: 20px;
+		@include breakpoint(medium) {
+			font-size: 60px;
+			margin-bottom: 40px;
+		}
+	}
+	li:nth-child(1) {	
+			.how-icon {
+    			background: url(../images/icon-user.png) no-repeat center center;
+    			@include image-2x("../images/icon-user@2x.png", 64px, 64px);
+	}
+}
+	li:nth-child(2) {	
+			.how-icon {
+    			background: url(../images/icon-badge.png) no-repeat center center;
+    			@include image-2x("../images/icon-badge@2x.png", 64px, 64px);
+	}
+}
+	li:nth-child(3) {	
+			.how-icon {
+    			background: url(../images/icon-megaphone.png) no-repeat center center;
+    			@include image-2x("../images/icon-megaphone@2x.png", 64px, 64px);
+	}
+}
+	li {
+		line-height: 20px;
+		text-align: center;
+		margin-bottom: 30px;
+		@include breakpoint(medium) {
+			float: left;
+			width: 33.33%;
+		}
+		p {
+			@include breakpoint(medium) {
+				padding: 0 16px;
+
+			}
+						@include breakpoint(large) {
+							font-size: 20px;
+							line-height: 28px;			
+						}
+		}
+		.how-icon {
+			margin: 0 auto 10px auto;
+			background: aqua;
+			display: block;
+			height: 64px;
+			width: 64px;
+		}
+	}
 }
 
 .phone-module-wrap {
-	height: 420px;
+	height: 440px;
 	width: 280px;
+	@include breakpoint(large) {
+		height: 600px;
+		width: 382px;
+	}
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
 	padding: 40px 15px 0 15px;
@@ -232,6 +311,57 @@ section:nth-child(odd) {
 	}
 }
 
+.case-study {
+	padding: 20px 0 0 0;
+	@include breakpoint(medium) {
+		padding: 60px 0 0 0;
+	}
+	.explainer-bullshit {
+		max-width: 400px;
+		@include breakpoint(medium) {
+			float: left;
+		}
+		@include breakpoint(large) {
+			padding-top: 60px;
+		}
+		.case-cracked {
+			display: block;
+			margin-bottom: 16px;
+			text-transform: uppercase;
+			font-size: 13px;
+		}
+		h3 {
+			margin-bottom: 16px;
+		}
+		p {
+			margin-bottom: 20px;
+			line-height: 24px;
+		}
+		.cta {
+			margin-bottom: 40px;
+		}
+	}
+	.phone-module-wrap {
+		@include breakpoint(medium) {
+			float: right;
+		}
+	}
+}
+
+.case-study-opposite {
+	.explainer-bullshit {
+		@include breakpoint(medium) {
+			float: right;
+		}
+	}
+	.phone-module-wrap {
+		@include breakpoint(medium) {
+			float: left;
+		}
+	}
+}
+
+
 .action-items {
 	.col-left{
 		float: left;
@@ -250,55 +380,70 @@ section:nth-child(odd) {
 
 }
 
+.hiring {
+	padding: 20px 0 20px;
+	@include breakpoint(small) { 
+			padding: 40px 0 40px; 
+	}
+	@include breakpoint(large) { 
+			padding: 80px 0 80px; 
+	}
+	background: url(../images/hiring.png) no-repeat left center;
+	.hiring-points {	
+		max-width: 400px;
+		float: right;
+		@include text-shadow(0 2px 30px $darkest);
+		h3 {
+			margin-bottom: 12px;
+		}
+		p {
+			margin-bottom: 16px;
+		}
+		ul {
+			line-height: 20px;
+			padding-left: 20px;
+			padding-bottom: 4px;
+			li {
+				list-style-type: circle;
+				margin-bottom: 12px;
+			}
+		}
+	}
+}
+
+.sign-up {
+	padding: 20px 0;
 form {
 	label {
 		display: block;
 	}
 	input {
-		background: $middle;
+		border-radius: 0;
+		background: $lightest;
 		border: none;
 		display: block;
-		width: 100%;
-		height: 40px;
+		width: 70%;
+		height: 44px;
 		margin-bottom: 10px;
 		padding: 0;
+		float: left;
 	}
 	input[type="submit"] {
-		background: red;
-		color: $lightest;
-		padding: 10px 20px;
+		background: $middle;
+		font-size: 30px;
+		color: $darkest;
 		display: inline-block;
 		width: auto;
 		float: right;
+		width: 30%;
+		@include league-gothic;
 	}
+}
 }
 
 footer {
-	background: green;
 	padding: 20px 0;
 }
 
-//
-//From Tomwahlin.com
 
-//h1 {
-//  position: absolute;
-//  left: 20px;
-//  padding-top: 38px;
-//  width: 46px;
-//  top: 65px;
-//  @include breakpoint(large) {
-//    left: 50%;
-//    margin-left: -23px;
-//  }
-//  a {
-//    background: url(../img/build/logo-tom-wahlin.png) no-repeat center;
-//    @include image-2x("../img/build/logo-tom-wahlin@2x.png", 46px, 38px);
-//    position: absolute;
-//    padding-top: 38px;
-//    width: 46px;
-//    top:0;
-//    right: 0;
-//    @include hide-text;
-//  }
-//}
+
